@@ -1,0 +1,26 @@
+# Force GitHub to recognize Python and Jupyter Notebook files
+*.py linguist-language=Python
+*.ipynb linguist-language=Jupyter Notebook
+
+# Ignore model weights and audio/image/video files in language stats
+*.h5 linguist-documentation
+*.pt linguist-documentation
+*.pth linguist-documentation
+*.wav linguist-documentation
+*.mp4 linguist-documentation
+*.png linguist-documentation
+*.jpg linguist-documentation
+*.jpeg linguist-documentation
+*.webm linguist-documentation
+*.mov linguist-documentation
+
+# Optional: ignore cache/compiled data
+__pycache__/* linguist-vendored
+*.pkl linguist-vendored
+*.npz linguist-vendored
+
+cd path/to/deepfake-detector
+echo '...contents above...' > .gitattributes
+git add .gitattributes
+git commit -m "📊 Add .gitattributes to improve language stats"
+git push
